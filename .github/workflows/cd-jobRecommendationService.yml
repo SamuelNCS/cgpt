@@ -3,8 +3,8 @@ on:
   push:
     #branches:
     #  - main
-    paths:
-      - 'JobRecommendationService/**'
+    #paths:
+    #  - 'JobRecommendationService/**'
 jobs:
   deploy-job-recommendation-service:
     name: Deploy job recommendation service
