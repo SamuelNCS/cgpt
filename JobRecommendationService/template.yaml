@@ -1,5 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
+Parameters:
+  gptApiKey:
+    Type: String
+    Default: gptApiKey
 Description: >
   job-rec-svc
   
@@ -34,7 +38,7 @@ Resources:
 
       Environment:
         Variables:
-          chatgptapikey: abcd 
+          chatgptapikey: !Ref gptApiKey 
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
