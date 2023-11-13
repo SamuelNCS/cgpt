@@ -2,14 +2,15 @@ name: CD - JobRecommendationService
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - 'JobRecommendationService/**'
 jobs:
-  deploy-user-service:
+  deploy-job-recommendation-service:
     name: Deploy job recommendation service
     runs-on: ubuntu-latest
     steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v2
       - uses: aws-actions/setup-sam@v1
